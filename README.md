@@ -3,6 +3,7 @@ Pling is a mobile project management application. This application was developed
 
 ## Developpers
 •	CALVADOS Cindy
+
 •	CHAUMULON Cassandra
 
 
