@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="fr.app.pling.view.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <argument
+            android:name="ShowAppBar"
+            android:defaultValue="true" />
+        <action
+            android:id="@+id/homeToProject"
+            app:destination="@id/navigation_project_details"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_report"
+        android:name="fr.app.pling.view.user.ReportFragment"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report">
+        <argument
+            android:name="ShowAppBar"
+            android:defaultValue="true" />
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_task_calendar"
+        android:name="fr.app.pling.view.task.TaskCalendarFragment"
+        android:label="fragment_task_calendar"
+        tools:layout="@layout/fragment_task_calendar">
+        <argument
+            android:name="ShowAppBar"
+            android:defaultValue="true" />
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="fr.app.pling.view.user.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+        <argument
+            android:name="ShowAppBar"
+            android:defaultValue="true" />
+        <action
+            android:id="@+id/SearchToProjectDetails"
+            app:destination="@id/navigation_project_details" />
+        <action
+            android:id="@+id/SearchToTaskDetails"
+            app:destination="@id/taskDetailsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_new_project"
+        android:name="fr.app.pling.view.project.ProjectFragment"
+        tools:layout="@layout/fragment_new_project"
+        android:label="NewProjectFragment">
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="project"
+            app:argType="fr.app.pling.model.Project"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="isNew"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <action
+            android:id="@+id/newProjectToShare"
+            app:destination="@id/shareFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_project_details"
+        android:name="fr.app.pling.view.project.ProjectDetailsFragment"
+        tools:layout="@layout/fragment_projet_details"
+        android:label="ProjectDetails" >
+        <argument
+            android:name="ShowAppBar"
+            android:defaultValue="false" />
+        <argument
+            android:name="project"
+            app:argType="fr.app.pling.model.Project" />
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <action
+            android:id="@+id/projectDetailsToNewTask"
+            app:destination="@id/newTaskFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/projectToTaskDetails"
+            app:destination="@id/taskDetailsFragment" />
+        <action
+            android:id="@+id/projetToEdit"
+            app:destination="@id/editProjectFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="fr.app.pling.view.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="isShowingNavbar"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/profileToDelete"
+            app:destination="@id/deleteAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_editPassword"
+        android:name="fr.app.pling.view.profile.EditPasswordFragment"
+        android:label="EditPasswordFragment"
+        tools:layout="@layout/fragment_edit_password">
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="isShowingNavbar"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/editPasswordToSuccess"
+            app:destination="@id/navigation_passwordReset" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_editEmail"
+        android:name="fr.app.pling.view.profile.EditEmailFragment"
+        android:label="EditEmailFragment"
+        tools:layout="@layout/fragment_edit_email">
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="isShowingNavbar"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/editEmailToSuccess"
+            app:destination="@id/navigation_emailUpdated" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_emailUpdated"
+        android:name="fr.app.pling.view.profile.EmailUpdatedFragment"
+        android:label="EmailUpdatedFragment"
+        tools:layout="@layout/fragment_email_updated">
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="isShowingNavbar"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_passwordReset"
+        android:name="fr.app.pling.view.profile.PasswordResetFragment"
+        android:label="PasswordResetFragment"
+        tools:layout="@layout/fragment_password_reset">
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="isShowingNavbar"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/deleteAccountFragment"
+        android:name="fr.app.pling.view.profile.DeleteAccountFragment"
+        android:label="fragment_delete_account"
+        tools:layout="@layout/fragment_delete_account">
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+
+
+    <!--ACTIVITIES-->
+    <activity
+        android:id="@+id/accountActivity"
+        android:name="fr.app.pling.view.AccountActivity"
+        android:label="account_activity"
+        tools:layout="@layout/activity_account"/>
+
+    <fragment
+        android:id="@+id/newTaskFragment"
+        android:name="fr.app.pling.view.task.NewTaskFragment"
+        android:label="fragment_new_task"
+        tools:layout="@layout/fragment_task" >
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="project"
+            app:argType="fr.app.pling.model.Project" />
+    </fragment>
+
+    <fragment
+        tools:layout="@layout/fragment_task_details"
+        android:id="@+id/taskDetailsFragment"
+        android:name="fr.app.pling.view.task.TaskDetailsFragment"
+        android:label="TaskDetailsFragment">
+
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="task"
+            app:argType="fr.app.pling.model.Task" />
+        <action
+            android:id="@+id/taskDetailToEditTask"
+            app:destination="@id/editTaskFragment" />
+
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_share"
+        android:id="@+id/shareFragment"
+        android:name="fr.app.pling.view.team.ShareFragment"
+        android:label="ShareFragment" >
+        <argument
+            android:name="project"
+            app:nullable="true"
+            app:argType="fr.app.pling.model.Project" />
+        <argument
+            android:name="isEdit"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/shareToEdit"
+            app:destination="@id/editProjectFragment" />
+        <action
+            android:id="@+id/shareToProject"
+            app:destination="@id/navigation_new_project" />
+    </fragment>
+
+    <fragment
+        tools:layout="@layout/fragment_edit_task"
+        android:id="@+id/editTaskFragment"
+        android:name="fr.app.pling.view.task.EditTaskFragment"
+        android:label="EditTaskFragment" >
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="task"
+            app:argType="fr.app.pling.model.Task" />
+        <action
+            android:id="@+id/action_editTaskFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProjectFragment"
+        tools:layout="@layout/fragment_edit_project"
+        android:name="fr.app.pling.view.project.EditProjectFragment"
+        android:label="EditProjectFragment"
+        >
+        <argument
+            android:name="project"
+            app:argType="fr.app.pling.model.Project" />
+        <argument
+            android:name="isBack"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/editProjetToShare"
+            app:destination="@id/shareFragment" />
+        <argument
+            android:name="isShowingToolbar"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <action
+            android:id="@+id/editToProjectDetails"
+            app:destination="@id/navigation_project_details" />
+    </fragment>
+
+
+</navigation>

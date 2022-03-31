@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="fr.app.pling.viewmodel.account.AuthViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stateListAnimator="@animator/input_elevation"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/purple_400">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_old_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="password"
+                    android:background="@drawable/edit_round"
+                    android:drawableStart="@drawable/input_password"
+                    android:drawablePadding="8dp"
+                    android:elevation="0dp"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Current password"
+                    android:inputType="textPassword"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:text="@={viewModel.passwordCheck}"
+                    android:textSize="@dimen/sp12" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.blure.complexview.ComplexView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:radius="50dp"
+                app:shadow="true"
+                app:shadowAlpha="80"
+                app:shadowColor="#FF7461"
+                app:shadowSpread="2">
+
+                <com.blure.complexview.ComplexView
+                    android:id="@+id/btn_delete"
+                    android:layout_width="331dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    app:color="@color/salmon_400"
+                    app:radius="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppins"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/deleteAccountNotUnderline"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp18" />
+
+                </com.blure.complexview.ComplexView>
+            </com.blure.complexview.ComplexView>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

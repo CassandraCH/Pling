@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name" translatable="false">Pling</string>
+
+    <!--  WELCOME PAGE  -->
+    <string name="start_btn">Get Started </string>
+
+    <!--  REGISTER AND LOGIN PAGES  -->
+    <string name="register_text">Let’s <b>sign up</b>.\nWelcome in the family!</string>
+    <string name="username_placeholder">Username</string>
+    <string name="email_placeholder">Email</string>
+    <string name="password_placeholder">Password</string>
+    <string name="register_btn">Register</string>
+    <string name="signIn_text"><b>Welcome back</b>.\nYou’ve been missed!</string>
+    <string name="signIn_btn">Sign In</string>
+    <string name="noAccount_link"><u>Don’t have an account ?</u></string>
+
+    <!--  HOME PAGE  -->
+    <string name="homePage_title">Hello</string>
+    <string name="homePage_subtitle">Welcome to your task manager.</string>
+    <string name="projects_title">Projects</string>
+    <string name="state_progress">In progress</string>
+    <string name="deadline">Deadline</string>
+    <string name="tasks_left">Tasks left</string>
+    <string name="todayHome_title">For today</string>
+
+    <!--  PROFILE PAGE / NOTIFICATIONS  -->
+    <string name="profilePage_title">Profile</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="signOut_btn">Sign Out</string>
+    <string name="settings">Settings</string>
+
+    <!-- TODAY TASKS PAGE / CALENDAR -->
+    <string name="calendarPage_title">Task calendar</string>
+
+    <!--  NEW TASK PAGE  -->
+    <string name="title">Title</string>
+    <string name="save_btn">Save </string>
+
+    <!--  TASK DETAILS PAGE  -->
+    <string name="taskDetailsPage_title">Task</string>
+    <string name="team_title">Team</string>
+    <string name="description_title">Description</string>
+    <string name="makeDone_btn">Make as done</string>
+
+    <!--  NEW PROJECT PAGE  -->
+    <string name="newProjectPage_title">Create project</string>
+    <string name="dueDate_title">Due date</string>
+    <string name="newProject_create">Create project</string>
+
+    <!--  PROJECT DETAILS PAGE  -->
+    <string name="projectDetailsPage_title">Project Details</string>
+    <string name="todo_state">To-Do</string>
+    <string name="completed_state">Completed</string>
+    <string name="done_state">Task done</string>
+
+    <!--  REPORT PAGE  -->
+    <string name="reportPage_title">Report</string>
+    <string name="overview_title">Task Overview</string>
+    <string name="progress_title">Progress</string>
+    <string name="completeTask_text">Completed Tasks</string>
+    <string name="ongoingTask_text">Ongoing Tasks</string>
+
+    <!--  SETTINGS  -->
+    <string name="editPassword">Reset password</string>
+    <string name="editEmail">Edit my email</string>
+    <string name="deleteAccount">Delete Account</string>
+    <string name="deleteAccountNotUnderline">Delete Account</string>
+    <string name="enableDarkMode_switch">Dark mode</string>
+
+    <!--  MESSAGES  -->
+
+
+    <!-- LOGIN -->
+    <string name="login_error">Invalid email, password</string>
+    <string name="signup_error">Please input all values</string>
+    <string name="input_empty">Please input all values</string>
+
+    <!--  BOTTOM NAVIGATION  -->
+    <string name="search_nav">Search</string>
+
+    <!-- Strings related to login -->
+
+
+    <string name="tasks_title">Tasks</string>
+    <string name="back_arrow">Back arrow</string>
+
+    <string name="user_count" translatable="false">%1$d+</string>
+    <string name="all_state">All</string>
+
+    <string name="newTask_title">New task</string>
+    <string name="editTask">Edit Task</string>
+    <string name="delete_task">Delete Task</string>
+    <string name="state_title">State</string>
+
+
+    <!-- Notification message related to login -->
+    <string name="notification_added_to_project">added you to the project</string>
+    <string name="notification_added_to_task">assigned you the task</string>
+    <string name="notification_remove_from_project">removed you from the project</string>
+    <string name="notification_remove_from_task">removed you from the task</string>
+
+
+    <!-- RESEARCH TEAM-->
+    <string name="task_affected_at">Manager</string>
+    <string name="task_starting">Task starting</string>
+
+    <string name="task_details_date">%1$s - %2$s</string>
+    <string name="delete_task_confirmation">Are you sure you want to delete this task?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="editProject">Edit project</string>
+
+
+    <string name="valid_delete_account">Are you sure you want delete your account ?</string>
+    <string name="cancel">Cancel</string>
+    <string name="attention">Attention</string>
+
+</resources>

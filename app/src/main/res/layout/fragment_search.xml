@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="vm"
+            type="fr.app.pling.viewmodel.user.SearchViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="32dp"
+        android:paddingEnd="16dp"
+       >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/back_arrow"
+                    android:src="@drawable/ic_previous" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints="text"
+                    android:background="@drawable/edit_round"
+                    android:drawableStart="@drawable/ic_search"
+                    app:endIconMode="clear_text"
+                    android:drawablePadding="8dp"
+                    android:elevation="0dp"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/search_nav"
+                    android:inputType="text"
+                    android:padding="16dp"
+                    android:singleLine="true"
+                    android:text="@={vm.search}"
+                    android:textSize="@dimen/sp14"
+                    android:layout_gravity="center"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:animateLayoutChanges="true"
+                android:id="@+id/radioGroup_character"
+                android:background="@drawable/filter_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/radio_task">
+
+                <RadioButton
+                    android:id="@+id/radio_task"
+                    android:background="@drawable/filter_search_selected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:text="@string/tasks_title"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/white"/>
+
+                <RadioButton
+                    android:id="@+id/radio_project"
+                    android:background="@drawable/filter_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/projects_title"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/brown_800"/>
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_TaskList"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:visibility="visible"
+            android:overScrollMode="never"
+            android:layout_width="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+
+    </LinearLayout>
+
+</layout>

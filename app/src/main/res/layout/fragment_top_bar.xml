@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    
+    <data>
+        
+        <variable
+            name="icon"
+            type="String" />
+        
+    </data>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="15dp"
+        android:paddingStart="0dp"
+        >
+
+        <!--    TITLES    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".view.MainActivity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingBottom="0dp"
+                android:text="@string/homePage_title"
+                android:textColor="@color/brown_800"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:padding="0dp"
+                android:text="@string/homePage_subtitle"
+                android:textColor="@color/grey_300"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!--    PROFILE IMAGE    -->
+
+        <RelativeLayout
+            android:id="@+id/ic_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/user_count"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/round_view_expand"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="@{icon}"
+                android:textColor="@color/blue_700"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/round_view"
+                android:backgroundTint="@color/red"
+                android:gravity="center"
+                android:padding="6dp"
+                android:textColor="@color/blue_700"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

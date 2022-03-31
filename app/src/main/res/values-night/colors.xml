@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  LIGHT COLOR -->
+
+    <color name="color_primary">#323750</color>
+    <color name="color_secondary">#FFFFFFFF</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey_100">#111731</color>
+    <color name="grey_120">#00000000</color>
+    <color name="grey_150">#ECECEC</color>
+
+    <color name="brown_800">#FFFFFF</color>
+
+    <color name="purple_200">#E3E3FA</color>
+<!--    <color name="purple_300">#E3E3FA</color>-->
+
+    <color name="purple_400">#A233C2</color>
+
+    <color name="salmon_300">#EE7C68</color>
+    <color name="salmon_400">#FF6752</color>
+    <color name="line">#2E334A</color>
+
+    <color name="orange">#FF6752</color>
+    <color name="green">#91C05F</color>
+    <color name="blue">#40B7D5</color>
+    <color name="yellow">#FFCD1B</color>
+
+    <color name="red">#D70606</color>
+    <color name="grey">#00000000</color>
+
+    <!--  DARK COLOR -->
+
+    <color name="grey_300">#ADADAD</color>
+    <color name="grey_500">#ADADAD</color>
+    <color name="grey_600">#676D80</color>
+
+    <color name="blue_100">#323750</color>
+    <color name="blue_700">#111731</color>
+
+    <color name="purple_400_dk">#A233C2</color>
+
+    <color name="teal_200">#15FFA1</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="black">#FF000000</color>
+    <color name="blc">#00000000</color>
+    <color name="text_logo">@color/white</color>
+
+    <color name="calendar_not_selected">@color/white</color>
+    <color name="calendar_selected">#15FFA1</color>
+    <color name="row_calendar_bg">@color/grey_600</color>
+
+    <color name="filter_bg">@color/blue_100</color>
+    <color name="submenu">@color/white</color>
+
+
+</resources>

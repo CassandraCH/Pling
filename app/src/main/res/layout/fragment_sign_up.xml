@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="fr.app.pling.viewmodel.account.AuthViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--    LOGO Pling    -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ic_logo_pling"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--    SIGN UP TEXT    -->
+            <TextView
+                android:id="@+id/tv_register_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/register_text"
+                android:textAlignment="textStart"
+                android:textColor="@color/brown_800"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!--    SIGN UP FORM    -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <EditText
+                    android:id="@+id/edt_register_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:autofillHints="emailAddress"
+                    android:background="@drawable/edit_round"
+                    android:drawableStart="@drawable/input_user"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/username_placeholder"
+                    android:inputType="textPersonName"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@animator/input_elevation"
+                    android:text="@={viewmodel.username}"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/edt_register_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:autofillHints="emailAddress"
+                    android:background="@drawable/edit_round"
+                    android:drawableStart="@drawable/input_email"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/email_placeholder"
+                    android:inputType="textEmailAddress"
+                    android:padding="18dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@animator/input_elevation"
+                    android:text="@={viewmodel.email}"
+                    android:textSize="12sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stateListAnimator="@animator/input_elevation"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintEnabled="false"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/purple_400">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_register_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:autofillHints="password"
+                        android:background="@drawable/edit_round"
+                        android:drawableStart="@drawable/input_password"
+                        android:drawablePadding="8dp"
+                        android:elevation="0dp"
+                        android:fontFamily="@font/poppins"
+                        android:hint="@string/password_placeholder"
+                        android:inputType="textPassword"
+                        android:padding="18dp"
+                        android:singleLine="true"
+                        android:text="@={viewmodel.password}"
+                        android:textSize="@dimen/dp12" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--    REGISTER BUTTON    -->
+                <com.blure.complexview.ComplexView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:radius="50dp"
+                    app:shadow="true"
+                    app:shadowAlpha="80"
+                    app:shadowColor="#FF7461"
+                    app:shadowSpread="2">
+
+                    <com.blure.complexview.ComplexView
+                        android:id="@+id/btn_register"
+                        android:layout_width="331dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        app:color="@color/salmon_400"
+                        app:radius="50dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins"
+                            android:paddingLeft="33dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="33dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/register_btn"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </com.blure.complexview.ComplexView>
+                </com.blure.complexview.ComplexView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</layout>

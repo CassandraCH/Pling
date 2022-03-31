@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="25dp"
+        tools:context=".view.AccountActivity">
+
+        <!--    LOGO Pling    -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_logo_pling"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--    WELCOME LOGO    -->
+
+        <!--    STARTED BUTTON    -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_pling"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.14" />
+
+        <com.blure.complexview.ComplexView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="91dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:radius="50dp"
+            app:shadow="true"
+            app:shadowAlpha="80"
+            app:color="@color/salmon_400"
+            app:shadowSpread="2">
+
+            <com.blure.complexview.ComplexView
+                android:id="@+id/btn_welcome_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                app:color="@color/salmon_400"
+                app:radius="50dp">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins"
+                    android:paddingLeft="33dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="33dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/start_btn"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </com.blure.complexview.ComplexView>
+        </com.blure.complexview.ComplexView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Email Updated"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="22sp"
+            android:paddingBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Your email has been updated successfully!"
+            android:fontFamily="@font/poppins"
+            android:textSize="14sp"
+            android:paddingBottom="50dp"/>
+
+        <com.blure.complexview.ComplexView
+            android:id="@+id/btn_back_home"
+            android:layout_width="wrap_content"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            app:color="@color/salmon_400"
+            app:radius="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Back to home"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp18" />
+        </com.blure.complexview.ComplexView>
+    </LinearLayout>
+</layout>

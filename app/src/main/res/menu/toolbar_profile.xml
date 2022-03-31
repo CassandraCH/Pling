@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/profile_submenu"
+        android:icon="@drawable/ic_sub_menu"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/edit_email"
+                android:title="@string/editEmail"
+                app:showAsAction="always"/>
+            <item
+                android:id="@+id/edit_password"
+                android:title="@string/editPassword"
+                app:showAsAction="always"/>
+        </menu>
+    </item>
+
+</menu>

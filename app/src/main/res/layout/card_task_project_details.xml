@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="item"
+            type="fr.app.pling.model.Task"/>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:layout_marginBottom="3dp"
+        app:cardCornerRadius="5dp"
+        app:rippleColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/grey"
+        app:strokeWidth="1dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/color_primary"
+            android:id="@+id/card_project_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="14dp"
+            android:paddingStart="13dp"
+            android:paddingEnd="13dp"
+            android:paddingBottom="14dp"
+           >
+
+            <!-- Title   -->
+            <TextView
+                android:id="@+id/tv_title_projectCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false"
+                android:text="@{item.title}"
+                android:textColor="@color/brown_800"
+                android:textSize="14sp"
+              />
+
+            <!-- Description   -->
+            <TextView
+                android:layout_marginTop="2dp"
+                android:id="@+id/tv_description_projectCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingBottom="6dp"
+                android:text="@{item.description}"
+                android:textColor="@color/grey_500"
+                android:textSize="@dimen/sp13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_projectCard" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:id="@+id/layout_state"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/purple_400"
+                app:cardCornerRadius="5dp"
+                app:rippleColor="@android:color/transparent"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/grey"
+                app:strokeWidth="1dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description_projectCard"
+                >
+
+                <!-- STATE   -->
+                <TextView
+                    android:enabled="false"
+                    android:clickable="false"
+                    android:textColor="@color/white"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:paddingStart="12dp"
+                    android:textSize="13sp"
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/makeDone_btn"
+                     />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</layout>
